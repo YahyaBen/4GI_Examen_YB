@@ -1,0 +1,14 @@
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\bin\Debug\Application Desktop.exe.config
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\bin\Debug\Application Desktop.exe
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\bin\Debug\Application Desktop.pdb
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\bin\Debug\EntityFramework.dll
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\bin\Debug\EntityFramework.xml
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application Desktop.csprojAssemblyReference.cache
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application_Desktop.Form1.resources
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application_Desktop.Properties.Resources.resources
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application Desktop.csproj.GenerateResource.cache
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application Desktop.csproj.CopyComplete
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application Desktop.exe
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application Desktop.pdb

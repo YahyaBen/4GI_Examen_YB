@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NetExamenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Demande">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Lycee_id" Type="Int32" />
+    <Property Name="Professeur_id" Type="Int32" />
+    <Property Name="Date_Demande" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Lycee" Relationship="Self.FK_Demande_Lycee" FromRole="Demande" ToRole="Lycee" />
+    <NavigationProperty Name="Professeur" Relationship="Self.FK_Demande_Professeur" FromRole="Demande" ToRole="Professeur" />
+  </EntityType>
+  <EntityType Name="Lycee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NbrPlacs" Type="Int32" />
+    <NavigationProperty Name="Demandes" Relationship="Self.FK_Demande_Lycee" FromRole="Lycee" ToRole="Demande" />
+  </EntityType>
+  <EntityType Name="Professeur">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Matricule" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NomComplet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateTravail" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Demandes" Relationship="Self.FK_Demande_Professeur" FromRole="Professeur" ToRole="Demande" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Demande_Lycee">
+    <End Role="Lycee" Type="Self.Lycee" Multiplicity="0..1" />
+    <End Role="Demande" Type="Self.Demande" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lycee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demande">
+        <PropertyRef Name="Lycee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Demande_Professeur">
+    <End Role="Professeur" Type="Self.Professeur" Multiplicity="0..1" />
+    <End Role="Demande" Type="Self.Demande" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Professeur">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demande">
+        <PropertyRef Name="Professeur_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NetExamenEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Demandes" EntityType="Self.Demande" />
+    <EntitySet Name="Lycees" EntityType="Self.Lycee" />
+    <EntitySet Name="Professeurs" EntityType="Self.Professeur" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Demande_Lycee" Association="Self.FK_Demande_Lycee">
+      <End Role="Lycee" EntitySet="Lycees" />
+      <End Role="Demande" EntitySet="Demandes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Demande_Professeur" Association="Self.FK_Demande_Professeur">
+      <End Role="Professeur" EntitySet="Professeurs" />
+      <End Role="Demande" EntitySet="Demandes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

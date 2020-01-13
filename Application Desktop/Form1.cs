@@ -19,7 +19,16 @@ namespace Application_Desktop
 
         private void Btn_Connecter_Click(object sender, EventArgs e)
         {
-
+            string A = "admin";
+            string B = "admin";
+            if(Txt_Auth_Login.Text == A && Txt_Auth_Password.Text == B && Txt_Auth_Login.Text !="" && Txt_Auth_Password.Text != "")
+            {
+                MessageBox.Show("YOOOOO", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Login - MDP Erronee / Remplir tous les Champs svp", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
