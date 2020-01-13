@@ -21,14 +21,22 @@ namespace Application_Desktop
         {
             string A = "admin";
             string B = "admin";
+            
             if(Txt_Auth_Login.Text == A && Txt_Auth_Password.Text == B && Txt_Auth_Login.Text !="" && Txt_Auth_Password.Text != "")
             {
-                MessageBox.Show("YOOOOO", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CRUDLycee C = new CRUDLycee();
+                C.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Login - MDP Erronee / Remplir tous les Champs svp", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Txt_Auth_Password.Text = "";
+            Txt_Auth_Password.PasswordChar = '*';
         }
     }
 }
