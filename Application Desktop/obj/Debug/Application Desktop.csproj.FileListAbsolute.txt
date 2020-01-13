@@ -13,3 +13,4 @@ C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Applic
 C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application Desktop.exe
 C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application Desktop.pdb
 C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application_Desktop.CRUDLycee.resources
+C:\Users\Hyrku\OneDrive\Desktop\.Net\EX_Net\Application Desktop\obj\Debug\Application_Desktop.CRUDdemandes.resources
